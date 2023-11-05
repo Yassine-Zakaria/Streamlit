@@ -38,7 +38,7 @@ WHERE Fact_Table.ID_Matiere > Moyenne_niveau order by Moyenne_niveau;
 '''
 
 # Connexion à la base de données SQL Server
-conn = pyodbc.connect('Driver={SQL Server};''Server=YASSINE;''Database=destination;''Trusted_Connection=yes;')
+conn = pyodbc.connect('Driver={SQL Server};''Server=YASSINE;''Database=Backup;''Trusted_Connection=yes;')
 
 with conn.cursor() as cursor:
     df1 = pd.read_sql_query(query1, conn)
